@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200;500&display=swap');
+
+body{
+    background-color: #141c2f;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Chivo Mono', monospace;
+}
+
+input {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.container{
+    color: white;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-holder{
+    width: 40em;
+    height: 34em;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.header-title{
+    font-size: 1.5em;
+}
+
+.light-yagami{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.light-yagami:hover{
+    cursor: pointer;
+}
+
+.search-area{
+    height: 3.7em;
+    background-color: #1f2a48;
+    border-radius: 0.7em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit{
+    padding: 0;
+    border: none;
+    background: none;
+    background-color: #0079fe;
+    height: 3.2em;
+    width: 6.5em;
+    border-radius: 0.7em;
+    color: white;
+    font-family: 'Chivo Mono', monospace;
+    margin-inline-end: 0.6em;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1em;
+    margin-inline-start: 1.5em;
+}
+.submit:hover{
+    cursor: pointer;
+}
+
+.search-box{
+    width: 30em;
+    height: 3.2em;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 1em;
+    font-weight: 200;
+    color: white;
+}
+
+.user-info{
+    height: 24em;
+    margin-top: 1em;
+    background-color: #1f2a48;
+    border-radius: 0.7em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-area{
+    width: 10em;
+    margin-top: 1.5em;
+    margin-inline-start: 1.5em;
+}
+
+.img-area > img{
+    width: 7em;
+    height: 7em;
+    border-radius: 0.7em;
+}
+
+.text-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.text-area{
+    margin-top: 1.5em;
+    width: 30em;
+}
+
+.user-title{
+    font-size: 1.5em;
+    margin: 0
+}
+
+.date-joined{
+    margin-inline-end: 2em;
+}
+
+.github-at{
+    margin-top: 0;
+}
+.github-at >a{
+    text-decoration: none;
+    color: #0079fe;
+    font-size: 0.8em;
+}
+
+.profile-bio, .date-joined{
+    font-weight: 200;
+    color: #bbbfc8;
+    font-size: 0.9em;
+}
+
+.profile-bio{
+    margin-bottom: 2em;
+}
+
+.stat-holder{
+    background-color: #141c2f;
+    width: 27em;
+    border-radius: 0.7em;
+}
+.profile-stats{
+    height: 4em;
+    width: 22em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-text{
+    font-weight: 200;
+    font-size: 0.8em;
+    color: #bbbfc8;
+    margin-bottom: 0.2em !important;
+}
+
+.stat-num{
+    margin-top: 0 !important;
+}
+
+.first-stat{
+    margin-inline-start: 1.3em;
+}
+
+.contact{
+    display: grid;
+    margin-top: 1em;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr;
+    row-gap: 0em;
+    font-weight: 200;
+    font-size: 0.9em;
+}
+
+.contact > div{
+    display: flex;
+    gap: 0.5em;
+}
+
+.contact > div > img{
+    object-fit: none;
+}
+
+.user-not-found{
+    border-radius: 0.7em;
+    height: 4em;
+    font-size: 2em;
+    text-align: center;
+}

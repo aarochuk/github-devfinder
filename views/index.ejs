@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GitHub Devfinder</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="content-holder">
+                <div class="header">
+                    <p class="header-title">devfinder</p>
+                    <div class="light-yagami"><p class="display-toggle"></p></div>
+                </div>
+                <form action="/" method="post">
+                    <div class="search-area">
+                        <div class="search-container">
+                            <img src="glass.png">
+                            <input class="search-box" name="username" type="text" placeholder="Search GitHub username...">
+                        </div>
+                        <button type="submit" class="submit">Search</button>
+                    </div>
+                </form>
+                <% if(locals.data){ %>
+                    <div class="user-info">
+                        <div class="img-area">
+                            <img src="ghpic.png">
+                        </div>
+                        <div class="text-area">
+                            <div class="text-heading">
+                                <p class="user-title"><%= data.name %></p>
+                                <p class="date-joined"><%= data.created %></p>
+                            </div>
+                            <p class="github-at">
+                                <a href="<%= data.github_url%>" target="_blank">@<%= data.username%></a>
+                            </p>
+                            <p class="profile-bio">
+                                <%= data.bio%>
+                            </p>
+                            <div class="stat-holder">
+                                <div class="profile-stats">
+                                    <div class="stat first-stat">
+                                        <p class="stat-text">Repos</p>
+                                        <p class="stat-num"><%= data.repos%></p>
+                                    </div>
+                                    <div class="stat">
+                                        <p class="stat-text">Followers</p>
+                                        <p class="stat-num"><%= data.followers%></p>
+                                    </div>
+                                    <div class="stat">
+                                        <p class="stat-text">Following</p>
+                                        <p class="stat-num"><%= data.following%></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact">
+                                <div><img src="place.png"><p> <%= data.location%> </p></div>
+                                <div><img src="twitter.png"><p> <%= data.twitter%> </p></div>
+                                <div><img src="link.png"><p> <%= data.website%> </p></div>
+                                <div><img src="email.png"><p> <%= data.email%> </p></div>
+                            </div>
+                        </div>
+                    </div>
+                <% }else{ %>
+                    <div class="user-not-found">
+                        <% if(locals.message){ %>
+                            <p><%= message %></p>
+                        <% }else{ %>
+                            <p>Please search for a user.</p>
+                        <% } %>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+
+    </body>
+</html>
